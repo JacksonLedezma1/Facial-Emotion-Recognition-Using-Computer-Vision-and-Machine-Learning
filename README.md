@@ -45,6 +45,4 @@ Based on FER2013 dataset:
 ## ✅ Expected Results
 - Real-time or image-based facial emotion detection.
 - Accuracy report on test data.
-- Visual demos using test images or webcam feed.
-
-## 📁 Folder Structure (Suggested)
+- Visual demos using test images or webcam feed. 
