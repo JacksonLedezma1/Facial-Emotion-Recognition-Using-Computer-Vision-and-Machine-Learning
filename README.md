@@ -11,7 +11,7 @@ This project applies facial detection and emotion recognition techniques using p
 - `OpenCV` – for face detection.
 - `DeepFace` or `fer` – for facial emotion recognition.
 - `Matplotlib` / `Seaborn` – for visualization.
-
+- Dataset: [FER2013](https://www.kaggle.com/datasets/msambare/fer2013)
 
 ## 🧪 Project Phases
 
