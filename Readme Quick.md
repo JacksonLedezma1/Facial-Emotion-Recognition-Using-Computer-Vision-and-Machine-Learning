@@ -5,21 +5,22 @@ Este proyecto permite detectar la **emoción principal** en imágenes utilizando
 ## 📦 Requisitos
 
 Instala las dependencias necesarias con:
-
+```bash
 pip install fer opencv-python matplotlib
-
+```
 
 ##📁 Estructura de Carpetas
 
 Coloca tus imágenes en un directorio. Por ejemplo:
-
+```bash
 Proyecto_Final/
 └── Quick/
     ├── imagen1.jpg
     ├── imagen2.jpg
     └── ...
+```
 ## 🧠 Código Explicado
-
+```bash
 # Importar bibliotecas necesarias
 from IPython import get_ipython             # Para trabajar con entornos IPython (como Colab)
 from IPython.display import display         # Para mostrar elementos multimedia
@@ -52,7 +53,7 @@ for img_file in img_files:
     # Detectar emoción principal
     result = detector.top_emotion(img)
     print(f"{img_file}: {result}")
-
+```
 ## 📝 Notas
 
 -Este código está pensado para usarse en Google Colab o Jupyter Notebook.
