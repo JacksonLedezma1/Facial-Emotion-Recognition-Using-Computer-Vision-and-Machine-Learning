@@ -8,6 +8,33 @@ Instala las dependencias necesarias con:
 ```bash
 pip install fer opencv-python matplotlib
 ```
+## 🗂️ Dataset de Imágenes
+
+Para que el modelo pueda detectar emociones, es necesario contar con un conjunto de imágenes faciales.
+
+### 🔹 Opción 1: Subir tus propias imágenes
+
+1. Coloca tus imágenes en una carpeta local o en tu Google Drive (si usas Google Colab).
+2. Asegúrate de que las imágenes estén en formato compatible como `.jpg`, `.png`, etc.
+3. Ejemplo de estructura:
+
+
+### 🔹 Opción 2: Usar un dataset público
+
+Puedes descargar un dataset de emociones faciales como:
+
+- [FER-2013 (Facial Expression Recognition)](https://www.kaggle.com/datasets/msambare/fer2013)
+- [Facial Emotion Recognition Dataset (Extended KUCEV ROMAN)](https://www.kaggle.com/datasets/tapakah68/facial-emotion-recognition?select=images)
+
+Después de descargarlo:
+
+1. Extrae las imágenes.
+2. Organiza las carpetas (pueden estar clasificadas por emoción o en una sola carpeta, según tu código).
+3. Cambia la ruta en el script Python para apuntar al directorio correcto.
+
+```python
+img_dir = "/ruta/a/tu/dataset"
+```
 
 ##📁 Estructura de Carpetas
 
