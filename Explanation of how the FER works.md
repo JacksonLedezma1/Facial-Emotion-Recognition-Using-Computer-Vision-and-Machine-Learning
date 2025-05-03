@@ -1,56 +1,76 @@
+"""
+📘 Explicación matemática del modelo FER (Facial Expression Recognition)
+Autor: [Tu Nombre o Usuario de GitHub]
 
-# 1. DETECCIÓN DEL ROSTRO
-# -----------------------
-# El modelo utiliza un detector de rostros (por ejemplo, MTCNN, Haar cascades o CNN)
-# para localizar la región facial en una imagen de entrada.
-#
-# Matemáticamente:
-#    Región_rostro = D(I)
-# Donde:
-#    - I: imagen original
-#    - D: función de detección de rostro (modelo)
-#    - Región_rostro: coordenadas del rostro detectado
+Este módulo describe, con anotaciones y fórmulas, cómo funciona un modelo de reconocimiento
+de expresiones faciales usando redes neuronales convolucionales (CNN), como el que usa la biblioteca `fer`.
 
-# 2. PREPROCESAMIENTO DEL ROSTRO
-# ------------------------------
-# La región facial detectada se transforma a escala de grises y se redimensiona,
-# normalmente a 48x48 píxeles.
-#
-# Fórmula:
-#    I' = resize(gray(Región_rostro))
-# Esto estandariza la entrada para el modelo CNN.
+--------------------------------------------
+🔹 1. Detección del rostro
+--------------------------------------------
 
-# 3. EXTRACCIÓN DE CARACTERÍSTICAS (CNN)
-# --------------------------------------
-# Se utilizan redes neuronales convolucionales (CNN) para extraer patrones visuales del rostro.
-# Cada capa convolucional realiza:
-#
-#    F_i = f(W_i * I' + b_i)
-#
-# Donde:
-#    - W_i: filtros (kernels) aprendidos en la capa i
-#    - * : operación de convolución
-#    - b_i: sesgo (bias)
-#    - f : función de activación, como ReLU
-#    - F_i: mapa de características extraído
+El sistema detecta automáticamente la región del rostro en una imagen.
 
-# 4. CLASIFICACIÓN DE EMOCIONES
-# -----------------------------
-# Al final, se aplica una capa densa (fully connected) seguida de una softmax,
-# que produce un vector de probabilidades para cada emoción:
-#
-#    p = softmax(z)
-#    softmax(z_i) = e^(z_i) / Σ_j e^(z_j)
-#
-# Donde:
-#    - z: vector de puntuaciones no normalizadas
-#    - p: vector de probabilidades para cada emoción
+📐 Fórmula:
+    Región_rostro = D(I)
 
-# 5. RESULTADO FINAL
-# ------------------
-# Se selecciona la emoción con la probabilidad más alta:
-#    resultado = max(p)
-#
-# Ejemplo:
-#    ('happy', 0.94)  -> el modelo predice "feliz" con 94% de confianza
+🔸 Donde:
+    - I: Imagen original
+    - D: Modelo de detección (por ejemplo, Haar cascades, MTCNN, CNN)
+    - Región_rostro: Coordenadas de la región facial detectada
 
+--------------------------------------------
+🔹 2. Preprocesamiento
+--------------------------------------------
+
+Una vez detectado, el rostro se convierte a escala de grises y se redimensiona.
+
+📐 Fórmula:
+    I' = resize(gray(Región_rostro))
+
+🔸 Estándar común: 48x48 píxeles, en escala de grises
+
+--------------------------------------------
+🔹 3. Extracción de características (CNN)
+--------------------------------------------
+
+Las redes convolucionales extraen patrones visuales a través de filtros.
+
+📐 Fórmula:
+    Fᵢ = f(Wᵢ * I' + bᵢ)
+
+🔸 Donde:
+    - Wᵢ: Filtros (kernels) de la capa i
+    - * : Convolución
+    - bᵢ: Sesgo (bias)
+    - f : Función de activación (e.g., ReLU)
+    - Fᵢ: Mapa de características generado
+
+--------------------------------------------
+🔹 4. Clasificación de emociones
+--------------------------------------------
+
+Las características se pasan por capas densas y una capa softmax.
+
+📐 Fórmula:
+    p = softmax(z)
+
+    softmax(zᵢ) = e^(zᵢ) / Σⱼ e^(zⱼ)
+
+🔸 Donde:
+    - z: Vector de salida de la red antes de la activación
+    - p: Vector de probabilidades de cada emoción
+
+--------------------------------------------
+🔹 5. Resultado final
+--------------------------------------------
+
+La emoción más probable es la salida del modelo.
+
+📦 Ejemplo de salida:
+    ('happy', 0.94)
+
+→ Indica que la emoción predicha es “feliz” con 94% de confianza.
+"""
+
+# Este archivo es de uso educativo. Puede ser combinado con un script de inferencia con FER.
