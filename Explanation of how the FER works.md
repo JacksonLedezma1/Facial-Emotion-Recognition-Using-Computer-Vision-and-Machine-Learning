@@ -1,4 +1,4 @@
-##Cómo funciona el modelo FER (matemáticamente)
+▶️Cómo funciona el modelo FER (matemáticamente)
 --------------------------------------------
 🔹 1. Detección del rostro
 --------------------------------------------
@@ -65,6 +65,10 @@ La emoción más probable es la salida del modelo.
     ('happy', 0.94)
 
 → Indica que la emoción predicha es “feliz” con 94% de confianza.
-"""
+--------------------------------------------
+📚 Recursos útiles
+--------------------------------------------
+- [FER2013 Dataset](https://paperswithcode.com/dataset/fer2013)
 
-# Este archivo es de uso educativo. Puede ser combinado con un script de inferencia con FER.
+
+-Este archivo es de uso educativo. Puede ser combinado con un script de inferencia con FER.
