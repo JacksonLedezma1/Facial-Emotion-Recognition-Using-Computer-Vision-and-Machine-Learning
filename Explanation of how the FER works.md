@@ -1,10 +1,3 @@
-"""
-📘 Explicación matemática del modelo FER (Facial Expression Recognition)
-Autor: [Tu Nombre o Usuario de GitHub]
-
-Este módulo describe, con anotaciones y fórmulas, cómo funciona un modelo de reconocimiento
-de expresiones faciales usando redes neuronales convolucionales (CNN), como el que usa la biblioteca `fer`.
-
 --------------------------------------------
 🔹 1. Detección del rostro
 --------------------------------------------
