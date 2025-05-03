@@ -1,3 +1,4 @@
+##Cómo funciona el modelo FER (matemáticamente)
 --------------------------------------------
 🔹 1. Detección del rostro
 --------------------------------------------
