@@ -63,8 +63,8 @@ La emoción más probable es la salida del modelo.
 
 📦 Ejemplo de salida:
     ('happy', 0.94)
-
 → Indica que la emoción predicha es “feliz” con 94% de confianza.
+
 --------------------------------------------
 📚 Recursos útiles
 --------------------------------------------
