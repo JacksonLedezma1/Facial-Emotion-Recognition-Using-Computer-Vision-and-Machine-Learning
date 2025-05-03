@@ -6,10 +6,10 @@ Este proyecto permite detectar la **emoción principal** en imágenes utilizando
 
 Instala las dependencias necesarias con:
 
-```bash
 pip install fer opencv-python matplotlib
 
-# 📁 Estructura de Carpetas
+
+##📁 Estructura de Carpetas
 
 Coloca tus imágenes en un directorio. Por ejemplo:
 
