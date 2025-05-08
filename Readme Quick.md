@@ -16,7 +16,6 @@ Para que el modelo pueda detectar emociones, es necesario contar con un conjunto
 
 1. Coloca tus imágenes en una carpeta local o en tu Google Drive (si usas Google Colab).
 2. Asegúrate de que las imágenes estén en formato compatible como `.jpg`, `.png`, etc.
-3. Ejemplo de estructura:
 
 
 ### 🔹 Opción 2: Usar un dataset público
