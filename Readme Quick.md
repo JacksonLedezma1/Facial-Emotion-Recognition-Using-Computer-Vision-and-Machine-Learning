@@ -59,7 +59,12 @@ import os                                   # Manejo del sistema de archivos
 img_dir = "/content/drive/MyDrive/Vision_Artificial/Proyecto_Final/Quick"  # Reemplaza con tu ruta
 
 # Obtener la lista de imágenes del directorio
-img_files = [f for f in os.listdir(img_dir) if os.path.isfile(os.path.join(img_dir, f))]
+# Filter for image files only - this is the key fix
+img_files = [
+    f
+    for f in os.listdir(img_dir)
+    if os.path.isfile(os.path.join(img_dir, f)) and f.lower().endswith(('.png', '.jpg', '.jpeg'))
+]
 
 # Inicializar el detector de emociones
 detector = FER()
@@ -77,7 +82,7 @@ for img_file in img_files:
     plt.show()
 
     # Detectar emoción principal
-    result = detector.top_emotion(img)
+    result = detector.top_emotion(img) # Se detecta la emoción principal en la imagen.
     print(f"{img_file}: {result}")
 ```
 ## 📝 Notas
